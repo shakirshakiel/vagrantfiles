@@ -11,5 +11,6 @@ Vagrant.configure("2") do |config|
     sudo mv terraform /usr/local/bin/
     mkdir -p /home/vagrant/.terraform.d/plugins/linux_amd64
     mv terraform-provider-libvirt /home/vagrant/.terraform.d/plugins/linux_amd64/
+    sudo chown -R vagrant:vagrant /home/vagrant/.terraform.d
   SHELL
 end
