@@ -2,7 +2,7 @@ Vagrant.configure("2") do |config|
   config.vm.box = "shakirshakiel/centos_guest_additions"
   config.vm.provision "shell", inline: <<-SHELL
     sudo yum install -y epel-release
-    sudo yum install -y tree unzip git mkisofs jq net-tools vim telnet
+    sudo yum install -y tree unzip git mkisofs jq net-tools vim telnet ruby
     sudo yum install -y qemu-kvm libvirt libvirt-python libguestfs-tools virt-install
     wget https://releases.hashicorp.com/terraform/0.11.11/terraform_0.11.11_linux_amd64.zip
     wget https://github.com/dmacvicar/terraform-provider-libvirt/releases/download/v0.5.1/terraform-provider-libvirt-0.5.1.CentOS_7.x86_64.tar.gz
@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
     mkdir -p /home/vagrant/.terraform.d/plugins/linux_amd64
     mv terraform-provider-libvirt /home/vagrant/.terraform.d/plugins/linux_amd64/
     sudo chown -R vagrant:vagrant /home/vagrant/.terraform.d
-    rpm -ivh http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
+    rpm -ivh https://yum.puppet.com/puppet5/puppet5-release-el-7.noarch.rpm
     sudo yum install -y puppetserver
     gem install r10k -v 2.6.4
     rm terraform_0.11.11_linux_amd64.zip
