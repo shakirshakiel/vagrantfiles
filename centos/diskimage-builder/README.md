@@ -1,0 +1,1 @@
+Centos 7 with guest additions & disk-image-builder

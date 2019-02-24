@@ -50,6 +50,7 @@ else
 fi
 version_description="$(cat $package_dir/Vagrantfile)"
 version_description_md="$(cat <<-END
+The following vagrant file was used to build this version:
 \`\`\`
 $version_description
 \`\`\`

@@ -1,0 +1,1 @@
+Centos 7 box (centos/7) with guest additions
