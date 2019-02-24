@@ -1,8 +1,0 @@
-os: osx
-before_install:
-  - brew cask install virtualbox
-  - brew cask install vagrant
-
-branches:
-  only:
-    - master
