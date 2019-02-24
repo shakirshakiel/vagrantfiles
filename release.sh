@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -eoux pipefail
+set -eou pipefail
 
 package_dir=${1-"./test"}
 box_file_name="package.box"
@@ -48,13 +48,24 @@ if [ -f $package_dir/README.md ]; then
 else
     description="$vagrant_cloud_box_name"
 fi
-version_description=$(cat $package_dir/Vagrantfile)
+version_description="$(cat $package_dir/Vagrantfile)"
+version_description_md="$(cat <<-END
+\`\`\`
+$version_description
+\`\`\`
+END
+)"
 
 set +e
 vagrant cloud box show "$vagrant_cloud_box_name"
 set -e
 
-vagrant cloud publish "$vagrant_cloud_box_name" $version virtualbox "${package_dir}/${box_file_name}" --release -d "$description" --version-description "$version_description"
+vagrant cloud publish "$vagrant_cloud_box_name" $version virtualbox "${package_dir}/${box_file_name}" --release -d "$description" --version-description "$version_description_md" --short-description "$description"
 
 rm "${package_dir}/${box_file_name}"
+
+cd $package_dir 
+vagrant destroy -f
+cd $pwd
+
 vagrant cloud auth logout
