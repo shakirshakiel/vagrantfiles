@@ -1,0 +1,1 @@
+Centos 7 with kubernetes 1.15.3
