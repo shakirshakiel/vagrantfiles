@@ -13,6 +13,7 @@ A list of vagrant files and boxes for every day use.
 |[gcc](https://github.com/shakirshakiel/vagrantfiles/blob/master/centos/gcc/Vagrantfile)|[shakirshakiel/centos_gcc](https://app.vagrantup.com/shakirshakiel/boxes/centos_gcc)|
 |[docker](https://github.com/shakirshakiel/vagrantfiles/blob/master/centos/docker/Vagrantfile)|[shakirshakiel/centos_docker](https://app.vagrantup.com/shakirshakiel/boxes/centos_docker)|
 |[kubernetes](https://github.com/shakirshakiel/vagrantfiles/blob/master/centos/kubernetes/Vagrantfile)|[shakirshakiel/centos_kubernetes](https://app.vagrantup.com/shakirshakiel/boxes/centos_kubernetes)|
+|[gocd](https://github.com/shakirshakiel/vagrantfiles/blob/master/centos/gocd/Vagrantfile)|[shakirshakiel/centos_gocd](https://app.vagrantup.com/shakirshakiel/boxes/centos_gocd)|
 
 
 #### Upload to vagrant cloud
