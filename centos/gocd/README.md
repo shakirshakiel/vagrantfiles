@@ -1,1 +1,1 @@
-Centos 7 with gocd
+Centos 7 with gocd & docker
