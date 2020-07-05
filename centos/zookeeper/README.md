@@ -1,0 +1,1 @@
+Centos 7 with Java 8 & Zookeeper 3.6.1
