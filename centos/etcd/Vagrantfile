@@ -1,0 +1,4 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "shakirshakiel/centos_guest_additions"
+  config.vm.provision "shell", path: './run_script.sh'  
+end
