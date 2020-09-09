@@ -1,0 +1,1 @@
+Centos 7 with Docker 19.03.1-ce, Docker compose 1.24.1, Infra utilities

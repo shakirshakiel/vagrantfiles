@@ -1,0 +1,6 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "shakirshakiel/centos_docker"
+  config.vm.box_version = "19.03.1"
+  
+  config.vm.provision "shell", path: './run_script.sh'  
+end
